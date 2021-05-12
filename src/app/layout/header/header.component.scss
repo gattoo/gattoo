@@ -1,0 +1,51 @@
+@import "../../../assets/scss/variables.scss";
+
+// $images-path: "../../assets/images/";
+$images-path: "";
+
+header {
+  display: flex;
+  justify-content: stretch;
+  width: 100%;
+  height: $header-height;
+  background: rgb(214, 233, 198);
+
+  a {
+    display: flex;
+    height: $header-height;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+
+    &:hover {
+      color: #444;
+      background: #b1d49d;
+    }
+  }
+
+  .logo {
+    font-family: 'libel_suitregular';
+    padding: 0 20px 0 15px;
+    font-size: 22px;
+
+    span {
+      width: 40px;
+      display: flex;
+      height: $header-height;
+      background: url($images-path + 'logo.png') no-repeat scroll left center transparent;
+      margin-right: 10px;
+    }
+  }
+
+  .divider {
+    flex: 1;
+  }
+
+  .about {
+    padding: 0 15px 0 20px;
+
+    &.active {
+      background-color: #b1d49d;
+    }
+  }
+}

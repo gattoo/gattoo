@@ -1,0 +1,18 @@
+footer {
+  width: 100%;
+  display: block;
+  height: 20px;
+  line-height: 19px;
+  margin-top: 15px;
+  font-size: 10px;
+  color: #888;
+  text-align: right;
+  border-top: 1px solid #ddd;
+  padding: 0 10px;
+  background-color: #fcfcfc;
+  overflow: hidden;
+
+  .copy {
+    float: right;
+  }
+}

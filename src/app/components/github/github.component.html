@@ -1,0 +1,27 @@
+<div class="user-view">
+
+  <div class="avatar"><img [src]="user?.avatar_url" [hidden]="!user.avatar_url"></div>
+
+  <div class="info-wrapper">
+    <div class="name">{{ user?.name }}</div>
+
+    <div class="login">
+      <a class="external" target="_blank" [href]="'https://github.com/' + user?.login">{{ user?.login }}</a>
+    </div>
+
+    <div class="search">
+      <input (input)="onChange($event)" vlaue="" placeholder="Search for a user">
+      <div class="preloader" [hidden]="!loading"></div>
+    </div>
+
+    <div class="info">
+      <ul>
+        <li>Repositories <span>{{ user?.public_repos }}</span></li>
+        <li>Followers <span>{{ user?.followers }}</span></li>
+        <li>Following <span>{{ user?.following }}</span></li>
+        <li>Gists <span>{{ user?.public_gists }}</span></li>
+      </ul>
+    </div>
+  </div>
+
+</div>

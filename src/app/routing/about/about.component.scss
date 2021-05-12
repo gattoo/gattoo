@@ -1,0 +1,72 @@
+@import "../../../assets/scss/variables.scss";
+
+.line {
+  display: block;
+  width: calc(100% - 30px);
+  background: tomato;
+  height: 5px;
+  position: relative;
+  margin: 20px 15px 10px;
+
+  &::after {
+    display: inline-block;
+    content: "@media only screen and (min-width: 960px)";
+    font-size: 10px;
+    position: absolute;
+    right: 5px;
+    top: -15px;
+  }
+}
+
+@media only screen and (max-width: 959px) {
+  .line {
+    background: green;
+
+    &::after {
+      content: "@media only screen and (max-width: 959px)";
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .line {
+    background: blue;
+
+    &::after {
+      content: "@media only screen and (max-width: 768px)";
+    }
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .line {
+    background: black;
+
+    &::after {
+      content: "@media only screen and (max-width: 599px)";
+    }
+  }
+}
+
+.technologies {
+  float: left;
+  width: 100%;
+  padding-left: 15px;
+  overflow: hidden;
+  user-select: none;
+
+  img {
+    display: block;
+    float: left;
+    margin: 20px 20px 0 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: 3px 5px 10px 0px rgba(204,204,204,0.46);
+  }
+
+  .info {
+    clear: both;
+    padding-top: 30px;
+    user-select: text;
+  }
+}

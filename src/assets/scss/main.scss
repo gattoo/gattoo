@@ -1,0 +1,61 @@
+@import "variables.scss";
+
+@font-face {
+  font-family: 'libel_suitregular';
+  src: url($fonts-path + 'libelsuit-webfont.eot');
+  src: url($fonts-path + 'libelsuit-webfont.eot?#iefix') format('embedded-opentype'),
+    url($fonts-path + 'libelsuit-webfont.woff') format('woff'),
+    url($fonts-path + 'libelsuit-webfont.ttf') format('truetype'),
+    url($fonts-path + 'libelsuit-webfont.svg#libel_suitregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Reset */
+html,
+body,
+div {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/*
+  Flexbox Holy Grail Layout
+  https://philipwalton.github.io/solved-by-flexbox/demos/holy-grail/
+*/
+
+.hg {
+  min-width: 360px;
+}
+
+.hg,
+.hg-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.hg {
+  min-height: 100vh;
+}
+
+.hg-body {
+  display: flex;
+  flex: 1;
+}
+
+.hg-content {
+  flex: 1;
+}

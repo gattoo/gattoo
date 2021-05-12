@@ -1,0 +1,13 @@
+.github-parallax-wrapper {
+  display: flex;
+  margin: 20px auto;
+
+  app-github {
+    margin-left: 15px;
+  }
+
+  app-parallax {
+    width: 100%;
+    margin: 0 15px;
+  }
+}
