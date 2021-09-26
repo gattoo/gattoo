@@ -1,0 +1,46 @@
+.d3-wrapper {
+  position: relative;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  margin: 15px;
+  width: calc(100% - 30px);
+  height: 300px;
+
+  #graph {
+    width: 100%;
+    height: 300px;
+
+    .link {
+      stroke: #666;
+      stroke-width: 1px;
+    }
+
+    .node {
+      cursor: pointer;
+      fill: #ccc;
+      stroke: #333;
+      stroke-width: 1px;
+    }
+  }
+
+  .rebuild {
+    position: absolute;
+    display: block;
+    bottom: 5px;
+    right: 5px;
+    width: 50px;
+    height: 17px;
+    line-height: 15px;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    background: #ccc;
+    cursor: pointer;
+    user-select: none;
+
+    &:active {
+      border: 1px solid #999;
+    }
+  }
+}
